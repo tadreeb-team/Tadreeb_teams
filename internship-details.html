@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TADREEBCOM - Internship Details</title>
+    <link rel="stylesheet" href="intern-detail.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+      <a href="index.html">TADREEB<span>COM</span></a>
+      </div>
+
+                <nav>
+                    <a href="student-dashboard.html">Internship Details</a>
+                </nav>
+
+                <div class="auth">
+                    <a href="login.html" class="login">Log in</a>
+                    <a href="signup.html"><button class="signup">Sign up</button></a>
+                </div>
+    </header>
+
+<div class="breadcrumb">
+    <a href="student-dashboard.html">← Back to Dashboard</a> › Software Development Intern
+</div>
+
+<div class="page-wrapper">
+
+    <!-- LEFT -->
+    <div class="main-content">
+
+        <div class="detail-card">
+            <div class="job-header">
+                <h1>Software Development Intern</h1>
+                <p class="company-info">🏢 Aramex · Amman, Jordan</p>
+                <div class="tags-row">
+                    <span class="tag">Field Training 1</span>
+                    <span class="tag">Computer Science</span>
+                    <span class="tag tag-orange">Full-time</span>
+                </div>
+            </div>
+            <div class="info-grid">
+                <div class="info-item"><p>💰 Monthly Pay</p><strong>200 JOD</strong></div>
+                <div class="info-item"><p>⏱ Duration</p><strong>3 Months</strong></div>
+                <div class="info-item"><p>📍 Location</p><strong>Amman</strong></div>
+                <div class="info-item"><p>📅 Start Date</p><strong>May 1, 2026</strong></div>
+                <div class="info-item"><p>🎓 Course</p><strong>Field Training 1</strong></div>
+                <div class="info-item"><p>📋 Spots Left</p><strong id="spotsLeft">3 Spots</strong></div>
+            </div>
+        </div>
+
+        <div class="detail-card">
+            <h2 class="section-title">About the Internship</h2>
+            <p>Aramex is looking for a motivated Computer Science student to join our Software Development team. You will work alongside experienced developers and get hands-on experience in building and maintaining web applications. This internship is ideal for students enrolled in Field Training 1.</p>
+        </div>
+
+        <div class="detail-card">
+            <h2 class="section-title">Requirements</h2>
+            <ul>
+                <li>Currently enrolled in Computer Science or a related major</li>
+                <li>Basic knowledge of HTML, CSS, and JavaScript</li>
+                <li>Familiarity with any programming language (Java, Python, etc.)</li>
+                <li>Good communication skills</li>
+                <li>Ability to work in a team environment</li>
+                <li>University letter confirming Field Training enrollment</li>
+            </ul>
+        </div>
+
+        <div class="detail-card">
+            <h2 class="section-title">What You Will Learn</h2>
+            <ul>
+                <li>Real-world software development practices</li>
+                <li>Working with Git and version control</li>
+                <li>Agile / Scrum methodology</li>
+                <li>Code review and debugging skills</li>
+                <li>How to work in a professional development team</li>
+            </ul>
+        </div>
+
+        <div class="detail-card">
+            <h2 class="section-title">Company Reviews</h2>
+
+            <div id="reviewsList">
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">Mohammad A.</span>
+                        <span class="stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">Great experience at Aramex. The team was very helpful and I learned a lot during my 3 months there.</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">Sara K.</span>
+                        <span class="stars">★★★★☆</span>
+                    </div>
+                    <p class="review-text">Good environment and friendly colleagues. The work was sometimes repetitive but overall a positive experience.</p>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="reviewer-name">Omar H.</span>
+                        <span class="stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">I would recommend this internship to any CS student. Very professional company with real projects to work on.</p>
+                </div>
+            </div>
+
+            <h3 style="font-size:15px; margin-top:20px; margin-bottom:8px;">Leave a Review</h3>
+            <div class="review-form">
+                <select id="reviewRating">
+                    <option value="5">⭐⭐⭐⭐⭐ 5 Stars</option>
+                    <option value="4">⭐⭐⭐⭐ 4 Stars</option>
+                    <option value="3">⭐⭐⭐ 3 Stars</option>
+                    <option value="2">⭐⭐ 2 Stars</option>
+                    <option value="1">⭐ 1 Star</option>
+                </select>
+                <textarea id="reviewText" placeholder="Write your review here..."></textarea>
+                <button class="submit-review" onclick="submitReview()">Submit Review</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="sidebar-card">
+            <button class="apply-btn" id="applyBtn" onclick="applyNow()">✅ Apply Now</button>
+            <button class="save-side-btn" id="saveBtn" onclick="toggleSave()">⭐ Save Internship</button>
+            <div class="success-msg" id="successMsg">✅ Application submitted successfully!</div>
+            <p style="font-size:12px; color:var(--muted); margin-top:10px; text-align:center;">
+                Posted 2 days ago · Deadline: April 30, 2026
+            </p>
+        </div>
+
+        <div class="sidebar-card">
+            <h4>About the Company</h4>
+            <div class="company-detail-row"><span>Company</span><span>Aramex</span></div>
+            <div class="company-detail-row"><span>Industry</span><span>Logistics & Tech</span></div>
+            <div class="company-detail-row"><span>Location</span><span>Amman, Jordan</span></div>
+            <div class="company-detail-row"><span>Size</span><span>1000+ Employees</span></div>
+            <div class="company-detail-row"><span>Rating</span><span style="color:var(--span);">★★★★★ 4.8</span></div>
+        </div>
+
+        <div class="sidebar-card">
+            <h4>Similar Internships</h4>
+            <div class="similar-item">Backend Developer Intern — Roya TV<span>Amman · 200 JOD/mo</span></div>
+            <div class="similar-item">Full-Stack Intern — Makeen<span>Amman · 220 JOD/mo</span></div>
+            <div class="similar-item">Mobile Dev Intern — Zain Jordan<span>Amman · 180 JOD/mo</span></div>
+        </div>
+
+    </div>
+</div>
+
+ <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3 class="logo">TADEEB<span>COM</span></h3>
+                <p>
+                    Empowering university students in Jordan by connecting them with the best internship
+                    opportunities to kickstart their careers.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>For Students</h4>
+                <a href="#">Browse opportunities</a>
+                <a href="signup.html">Create profile</a>
+                       
+            </div>
+            <div class="footer-col">
+                <h4>For Companies</h4>
+                <a href="#">Post an Internship</a>
+                
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 TADREEBCOM. 
+        </div>
+
+    </footer>
+
+<script>
+    let applied = false;
+    let saved = false;
+    let spots = 3;
+
+    function applyNow() {
+        if (applied) return;
+        applied = true;
+
+        // Update button
+        const btn = document.getElementById('applyBtn');
+        btn.textContent = '✅ Applied!';
+        btn.disabled = true;
+
+        // Show success message
+        document.getElementById('successMsg').style.display = 'block';
+
+        // Reduce spots
+        spots--;
+        document.getElementById('spotsLeft').textContent = spots + ' Spots';
+    }
+
+    function toggleSave() {
+        saved = !saved;
+        const btn = document.getElementById('saveBtn');
+        if (saved) {
+            btn.textContent = '⭐ Saved!';
+            btn.classList.add('saved');
+        } else {
+            btn.textContent = '⭐ Save Internship';
+            btn.classList.remove('saved');
+        }
+    }
+
+    function submitReview() {
+        const text = document.getElementById('reviewText').value.trim();
+        if (!text) {
+            alert('Please write your review first.');
+            return;
+        }
+
+        const rating = document.getElementById('reviewRating').value;
+        const stars = '★'.repeat(parseInt(rating)) + '☆'.repeat(5 - parseInt(rating));
+
+        const newReview = document.createElement('div');
+        newReview.className = 'review-item';
+        newReview.innerHTML = `
+            <div class="review-header">
+                <span class="reviewer-name">You</span>
+                <span class="stars">${stars}</span>
+            </div>
+            <p class="review-text">${text}</p>
+        `;
+
+        document.getElementById('reviewsList').appendChild(newReview);
+        document.getElementById('reviewText').value = '';
+        document.getElementById('reviewRating').value = '5';
+    }
+</script>
+
+</body>
+</html>

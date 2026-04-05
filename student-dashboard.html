@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TADREEBCOM - Student Dashboard</title>
+    <link rel="stylesheet" href="std-dash.css">
+</head>
+<body>
+
+ <header class="navbar">
+        
+                <div class="logo">
+                    <a href="index.html">TADREEB<span>COM</span></a>
+                </div>
+
+                <nav>
+                    <a href="student-dashboard.html">Student Dashboard</a>
+                </nav>
+
+                <div class="auth">
+                    <a href="login.html" class="login">Log in</a>
+                    <a href="signup.html"><button class="signup">Sign up</button></a>
+                </div>
+    </header>
+
+<main class="page-wrapper">
+
+    <div class="welcome">
+        <h1>Welcome back, Ahmad 👋</h1>
+        <p>Browse and apply to internship opportunities that match your major.</p>
+    </div>
+
+    <div class="stats-row">
+        <div class="stat-card">
+            <h3 id="stat-applied">0</h3>
+            <p>📋 Applications Sent</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="stat-saved">0</h3>
+            <p>⭐ Saved Internships</p>
+        </div>
+        <div class="stat-card">
+            <h3>1</h3>
+            <p>✅ Interview Scheduled</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="stat-showing">8</h3>
+            <p>🏢 Showing Results</p>
+        </div>
+    </div>
+
+    <div class="filter-section">
+        <h2>🔍 Search & Filter Internships</h2>
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search by title or company..." />
+            <select id="filterMajor">
+                <option value="">All Majors</option>
+                <option value="cs">Computer Science</option>
+                <option value="network">Network Engineering</option>
+                <option value="design">UI/UX Design</option>
+                <option value="security">Cybersecurity</option>
+            </select>
+            <select id="filterLocation">
+                <option value="">All Locations</option>
+                <option value="amman">Amman</option>
+                <option value="irbid">Irbid</option>
+                <option value="zarqa">Zarqa</option>
+            </select>
+            <select id="filterCourse">
+                <option value="">All Courses</option>
+                <option value="ft1">Field Training 1</option>
+                <option value="ft2">Field Training 2</option>
+            </select>
+            <button class="search-btn" onclick="applyFilters()">Search</button>
+            <button class="reset-btn" onclick="resetFilters()">Reset</button>
+        </div>
+    </div>
+
+    <h2 class="section-title">Available Internships</h2>
+    <div class="no-results" id="noResults">😕 No internships found. Try different filters.</div>
+    <div class="cards-grid" id="cardsGrid"></div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3 class="logo">TADREEB<span>COM</span></h3>
+            <p>Helping students in Jordan find the right internship for their major.</p>
+        </div>
+        <div class="footer-col">
+            <h4>For Students</h4>
+            <a href="#">Browse Opportunities</a>
+            <a href="#">My Applications</a>
+            <a href="#">Saved Internships</a>
+        </div>
+        <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">Help Center</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+    <div class="footer-bottom">© 2026 TADREEBCOM</div>
+</footer>
+
+<script src="std-dash.js"></script>
+
+</body>
+</html>
